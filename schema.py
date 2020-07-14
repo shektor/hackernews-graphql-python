@@ -32,7 +32,8 @@ class Query(graphene.ObjectType):
     node = relay.Node.Field()
 
     all_employees = SQLAlchemyConnectionField(
-        Employee.connection, sort=Employee.sort_argument())
+        Employee.connection, sort=Employee.sort_argument()
+    )
     all_roles = SQLAlchemyConnectionField(Role.connection)
     all_departments = SQLAlchemyConnectionField(
         Department.connection, sort=None
